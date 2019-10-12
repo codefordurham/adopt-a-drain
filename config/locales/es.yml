@@ -22,13 +22,13 @@ es:
     required: "(requirido)"
   defaults:
     address: "dirección"
-    address_1: "1 City Hall Plaza"
-    address_2: "Suite 500"
-    city: "Durham"
-    city_state: "Durham, North Carolina"
+    address_1: "3 E Bay St"
+    address_2: ""
+    city: "Savannah"
+    city_state: "Savannah, Georgia"
     neighborhood: "Downtown"
     sms_number: "857-555-1212"
-    state: "NC"
+    state: "GA"
     thing: "boca de incendio"
     this_thing: "Esta %{thing}"
     tagline: "Reclamar la responsabilidad para adoptar un alcantarillado"  # después de que las nieves. Not sure about this text
@@ -83,14 +83,14 @@ es:
     thank_you: "Gracias por la adopción de este %{thing}!"
     tos: "Términos de Servicio"
   sponsors:
-    built: "Construido en Boston"
+    built: "Construido en Savannah"
     # Not sure what to put in built
 
-    cfa: "Código de los Estados Unidos"
-    city: "Ciudad de Boston"
+    cfa: "OpenSavannah"
+    city: "Ciudad de Savannah"
     # Not sure what to put in city
 
     
     mayor:
-      name: "Bill Bell"
+      name: "Eddie DeLoach"
       title: "Mayor"

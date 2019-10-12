@@ -1,0 +1,17 @@
+= form_for :cleanings, :url => {action: 'create'}, :html => {:id => "cleaning-form", :class => "form-vertical"} do |f|
+    :javascript
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    .form-group
+        %label.control-label{:for => "date_cleaned", :id => "date_cleaned_label"}
+        = t("labels.date_cleaned")
+        = f.date_field "date_cleaned", :class => "form-control", :required => true
+        %label.control-label{:for => "diverted", :id => "diverted_label"}
+        = t("labels.diverted")
+        %i.fa.fa-question-circle{:data_toggle=>"tooltip", :title=>"Please enter the type and weight of the materials you pulled out of the drain.  Ex: 2lbs of hard plastic & 3lbs of pine straw.  This information helps tremendously with research."}
+        = f.text_area "diverted", :class => "form-control"
+        = f.hidden_field "user_id", :value => params[:user]
+        = f.hidden_field "thing_id", :value => params[:thing]
+    .form-actions
+        = f.submit t("buttons.submit_cleaning"), :class => "btn btn-primary btn-block"

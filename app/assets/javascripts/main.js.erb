@@ -14,14 +14,14 @@ $(function() {
     keyboardShortcuts: false,
     mapTypeControl: false,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
-    maxZoom: 21,
-    minZoom: 15,
+    maxZoom: 20,
+    minZoom: 10,
     panControl: false,
     rotateControl: false,
     scaleControl: false,
     streetViewControl: true,
     zoom: 17,
-    zoomControl: true,
+    zoomControl: false,
     styles: [
       {"featureType":"transit", "stylers":[{visibility: "off"}]},
       {
@@ -58,7 +58,7 @@ $(function() {
   // });
 
   //                                          lat, lon
-  initialLocation = new google.maps.LatLng(35.996,-78.902);
+  initialLocation = new google.maps.LatLng(32.076176, -81.088371);
   map.setCenter(initialLocation);
   map.setZoom(18);
   var iconBase = '<%= image_path 'markers/' %>';
@@ -98,8 +98,8 @@ $(function() {
 
   var icons = {
     available: {
-      name: 'Drains to Creek',
-      title:  'Creek',
+      name: 'Drains to Ogeechee/Savannah',
+      title:  'River',
       icon: '<%= image_path 'markers/tosewer.png' %>'
     },
     adopted: {
@@ -367,6 +367,8 @@ $(function() {
             $('#address').focus();
           } else {
             $('#address').parent().removeClass(errorClass);
+            //Close the sidebar on mobile devices to reveal the map.
+            $('.sidebar').removeClass('sidebar-full');
             $('#address').next(".help-block").html('');
             zoomTo(data[0], data[1]);
           }

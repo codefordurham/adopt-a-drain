@@ -27,7 +27,7 @@ namespace :data do
 
   task load_drains: :environment do
     puts 'Loading drains...'
-    url = 'durham_drains.csv'
+    url = 'savannah_drains.csv'
     csv_string = open(url).read
     drains = CSV.parse(csv_string, headers: true)
     puts "#{drains.size} Drains."

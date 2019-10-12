@@ -22,9 +22,9 @@
           - elsif @reset_password_token.present?
             = render :partial => 'passwords/edit'
           - else
-            %iframe{ :width => "100%", :src => "https://www.youtube.com/embed/Z1Vjrx3IAH0", :frameborder => "0", :allowfullscreen => "allowfullscreen" }
+            %iframe{ :width => "100%", :src => "http://youtube.com/watch?v=CRm5xctANC0", :frameborder => "0", :allowfullscreen => "allowfullscreen" }
             = render :partial => "sidebar/search"
-          %a{:href => "https://docs.google.com/forms/d/e/1FAIpQLSc5UFpt8Ukle9i2YvJvBKFCrgCtlmQsZuTKbhe6Y3Ito2arGQ/viewform", :class => "btn btn-primary"}
+          %a{:href => "http://adoptadrainsav.paperform.co", :class => "btn btn-primary"}
             = "Please Give Us Feedback!"
         -# Corresponds to guideline div above
         %div.hidden.visible-xs-block
@@ -33,15 +33,9 @@
               = t("defaults.tagline")
         #logos
           .row
-            .col-xs-4
-              %a{:href => "http://dconc.gov/"}
-                = image_tag "logos/DurhamCountyLogo.png", :alt => t("sponsors.built"), :title => t("sponsors.built"), :class => "cfsf"
-            .col-xs-4
-              %a{:href => "https://durhamnc.gov/"}
-                = image_tag "logos/DurhamCityLogo.png", :alt => t("sponsors.built"), :title => t("sponsors.built"), :class => "cfsf"
-            .col-xs-4
-              %a{:href => "http://codefordurham.com/"}
-                = image_tag "logos/CodeforDurhamlogo.png", :alt => t("sponsors.built"), :title => t("sponsors.built"), :class => "cfsf"
+            .col-xs-6
+              %a{:href => "http://opensavannah.org/"}
+                = image_tag "logos/opensavlogo.png", :alt => t("sponsors.built"), :title => t("sponsors.built"), :class => "cfa"
             .col-xs-4
               %a{:href => "http://codeforamerica.org/"}
                 = image_tag "logos/cfa.jpg", :alt => t("sponsors.cfa"), :title => t("sponsors.cfa"), :class => "cfa"
@@ -54,7 +48,7 @@
                   = t("links.learn_more_background")
             .col-md-6
               %p.pull-right
-                %a{:href => URI.escape("mailto:adoptadraindurham@gmail.com?subject=#{t("titles.main", :thing => t("defaults.thing").titleize)} - #{t("links.feedback").titleize}")}
+                %a{:href => URI.escape("mailto:Info@adopt-a-drain-savannah.org?subject=#{t("titles.main", :thing => t("defaults.thing").titleize)} - #{t("links.feedback").titleize}")}
                   = t("links.feedback")
     .col-md-9.map-container
       #map

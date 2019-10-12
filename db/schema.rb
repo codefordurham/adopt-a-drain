@@ -11,10 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160326200455) do
+ActiveRecord::Schema.define(version: 20190901004437) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cleanings", force: :cascade do |t|
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.text     "diverted"
+    t.date     "date_cleaned"
+    t.integer  "thing_id"
+    t.integer  "user_id"
+  end
+
+  add_index "cleanings", ["thing_id"], name: "index_cleanings_on_thing_id", using: :btree
+  add_index "cleanings", ["user_id"], name: "index_cleanings_on_user_id", using: :btree
 
   create_table "rails_admin_histories", force: :cascade do |t|
     t.string   "message"

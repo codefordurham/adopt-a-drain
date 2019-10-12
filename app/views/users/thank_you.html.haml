@@ -1,5 +1,9 @@
 %h2
   = t("titles.thank_you", thing: t("defaults.thing"))
+  %br/
+  %a{ target: '_blank', href: "#{new_cleanings_path(:user => current_user, :thing => params[:thing_id])}" }
+    %i.fa.fa-check-square.fa-2x
+  %br/
   %a{ target: '_blank', href: "mailto:?subject=#{URI.encode(t("titles.main", thing: t("defaults.thing")))}&body=#{URI.encode(t("titles.email_text", root_url: root_url, thing: t("defaults.thing")))}" }
     %i.fa.fa-envelope-square.fa-2x
   %a{ target: '_blank', href: "https://www.facebook.com/sharer/sharer.php?u=#{root_url}" }

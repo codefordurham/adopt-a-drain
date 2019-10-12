@@ -131,12 +131,12 @@ h5.my-things {
 }
 
 .btn-primary {
-  color: #fff;
+  color: #000;
   border-color: #2e6da4;
 }
 
 .btn-primary:hover {
-  color: #fff;
+  color: #000;
   background-color: #005596;
   border-color: #204d74;
 }

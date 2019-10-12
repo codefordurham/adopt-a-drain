@@ -1,0 +1,13 @@
+build:
+  docker:
+    web: Dockerfile
+    #worker: worker/Dockerfile
+  config:
+    BUNDLE_INSTALL_ARGS: --jobs 10 --retry=3 --without development test
+    RAILS_ENV: production
+run:
+  web: bundle exec puma -C config/puma.rb
+  worker:
+    command:
+      - bundle exec rake jobs:work
+    image: web

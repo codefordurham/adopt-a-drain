@@ -2,19 +2,14 @@
 
 Claim responsibility for cleaning out a storm drain after it rains.
 
-[![Travis CI](https://travis-ci.org/specious/adopt-a-drain.svg?branch=production)](https://travis-ci.org/specious/adopt-a-drain)
-
-## Screenshot
-![Adopt-a-Drain](/adopt.png "Adopt-a-Drain")
-
 ## Production
 
-https://adoptadrain.codefordurham.com/
+https://adopt-a-drain-savannah.org
 
 ## Installation
 This application requires [Postgres](http://www.postgresql.org/) to be installed
 
-    git clone git://github.com/codefordurham/adopt-a-drain.git
+    git clone git://github.com/opensavannah/adopt-a-drain.git
     cd adopt-a-drain
     bundle install
 
@@ -84,9 +79,23 @@ A successful deployment to Heroku requires a few setup steps:
 
     `heroku run bundle exec rake db:seed`
 
+If you choose, you can use the pre-defined Docker build and deployment for Heroku. 
+You will need set your Heroku stack to container:
+
+    heroku stack:set container
+
+    git push heroku master
+
+
 Keep in mind that the Heroku free Postgres plan only allows up to 10,000 rows,
 so if your city has more than 10,000 fire drains (or other thing to be
 adopted), you will need to upgrade to the $9/month plan.
+
+### Google Maps API Service
+You will need to apply for a Google Maps Javascript API key in order to remove the "Development Only" watermark on maps. 
+After you have obtained the key, you will need to set it as an environment variable.
+
+    heroku config:set GOOGLE_MAPS_KEY=your_maps_api_key
 
 ### Google Analytics
 If you have a Google Analytics account you want to use to track visits to your
@@ -119,8 +128,8 @@ Here are some ways *you* can contribute:
 * by reviewing patches
 * [financially][]
 
-[locales]: https://github.com/sfbrigade/adopt-a-drain/tree/master/config/locales
-[issues]: https://github.com/sfbrigade/adopt-a-drain/issues
+[locales]: https://github.com/opensavannah/adopt-a-drain/tree/master/config/locales
+[issues]: https://github.com/opensavannah/adopt-a-drain/issues
 [financially]: https://secure.sfbrigade.org/page/contribute
 
 ## Submitting an Issue
@@ -165,8 +174,8 @@ timely fashion. If critical issues for a particular implementation exist at the
 time of a major release, support for that Ruby version may be dropped.
 
 ## Copyright
-Copyright (c) 2017 Code for Durham. See [LICENSE.md](https://github.com/codefordurham/adopt-a-drain/blob/master/LICENSE.md) for details.
+Copyright (c) 2019 Code for Savannah. See [LICENSE.md](https://github.com/opensavannah/adopt-a-drain/blob/master/LICENSE.md) for details.
 
-[license]: https://github.com/codefordurham/adopt-a-drain/blob/master/LICENSE.md
+[license]: https://github.com/opensavannah/adopt-a-drain/blob/master/LICENSE.md
 
 

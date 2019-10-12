@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  diverted: MyText
+  date_cleaned: 2019-09-01
+  thing_id: thing_1
+
+two:
+  diverted: MyText
+  date_cleaned: 2019-09-01
+  thing_id: thing_2

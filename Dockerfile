@@ -9,5 +9,8 @@ RUN mkdir /myapp
 WORKDIR /myapp
 EXPOSE 3000
 COPY . /myapp
-RUN bundle install
-CMD ["bundle", "exec", "puma", "-p", "3000"]
+ARG BUNDLE_INSTALL_ARGS
+ARG RAILS_ENV=development
+RUN bundle install ${BUNDLE_INSTALL_ARGS}
+RUN if [ "$RAILS_ENV" = "production" ]; then SECRET_TOKEN=$(rake secret) bundle exec rake assets:precompile; fi
+CMD ["bundle", "exec", "puma", "-C", "config/puma.rb"]

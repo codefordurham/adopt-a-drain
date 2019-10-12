@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   has_many :reminders_from, class_name: 'Reminder', foreign_key: 'from_user_id'
   has_many :reminders_to, class_name: 'Reminder', foreign_key: 'to_user_id'
   has_many :things
+  has_many :cleanings
   validates :first_name, presence: true
   validates_formatting_of :email, using: :email
   validates_formatting_of :sms_number, using: :us_phone, allow_blank: true

@@ -17,6 +17,12 @@ Rails.application.routes.draw do
 
   resource :reminders
   resource :things
+  resource :cleanings do
+    collection do
+      get 'cleaning_form'
+    end
+  end
+  
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   root to: 'main#index'
 end

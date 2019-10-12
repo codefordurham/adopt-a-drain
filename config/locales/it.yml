@@ -22,10 +22,10 @@ it:
     required: "(richiesto)"
   defaults:
     address: "indirizzo"
-    address_1: "1 City Hall Plaza"
-    address_2: "Suite 500"
-    city: "Durham"
-    city_state: "Durham, North Carolina"
+    address_1: "2 E Bay St"
+    address_2: ""
+    city: "Savannah"
+    city_state: "Savannah, Georgia"
     neighborhood: "Downtown"
     sms_number: "857-555-1212"
     state: "NC"
@@ -83,13 +83,13 @@ it:
     thank_you: "Grazie per aver scelto questo %{thing}!"
     tos: "Condizioni contrattuali"
   sponsors:
-    built: "Costruito in Boston"
+    built: "Costruito in Savannah"
     # Not sure what to put in built
 
-    cfa: "Code for America"
-    city: "Città di Boston"
+    cfa: "OpenSavannah"
+    city: "Città di Savannah"
     # Not sure what to put in city
 
     mayor:
-      name: "Bill Bell"
+      name: "Eddie DeLoach"
       title: "Sindaco"

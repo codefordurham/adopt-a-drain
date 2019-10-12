@@ -59,5 +59,5 @@ adopt-a-drain/app/mailers/application_mailer.rb
 
 If you have any complaints, please email or contact us:
 
-Laura Smith: adoptadraindurham@gmail.com
+OpenSavanah Brigade: Info@adopt-a-drain-savannah.org
 
